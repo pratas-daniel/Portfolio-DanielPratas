@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contactos</title>
+
+	<!-- CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<link href="css/portfolio.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar" role="navigation">
+		<ul class="nav nav-pills nav-justified">
+			<li class="pill"><a href="index.html">Home</a></li>
+			<li class="pill"><a href="about.html">Sobre</a></li>
+			<li class="pill"><a href="school.html">Formação</a></li>
+			<li class="pill"><a href="work.html">Trabalho</a></li>
+			<li class="selected pill"><a href="contacts.html">Contactos</a></li>
+			<li class="pill dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Redes Sociais <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li> <a href="https://www.facebook.com/pratas.dani"><img class="img-responsive img-social" src="media/imagens/facebook.png"/> Facebook</a></li>
+					<li> <a href="https://twitter.com/pratas_daniel"><img class="img-responsive img-social" src="media/imagens/twitter.png"/> Twitter</a></li>
+					<li> <a href="https://www.instagram.com/pratas_daniel"><img class="img-responsive img-social" src="media/imagens/instagram.jpg"/> Instagram</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	
+	<!-- Intro -->
+	<div class="intro container-fluid">
+		<div class="row">
+			<h1>Portfólio<span> &raquo; Contactos</span></h1>
+		</div>
+	</div>
+	
+	<!-- Map -->
+	<div class="map">
+		<iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3064.362509648904!2d-7.503711884364077!3d39.82128929956006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3d5c2073992d33%3A0xe8cc8ce0707450ee!2sR.%20Dr.%20Francisco%20Jos%C3%A9%20Palmeiro%20C2%2C%206000-230%20Castelo%20Branco!5e0!3m2!1sen!2spt!4v1611709253953!5m2!1sen!2spt"></iframe><br>
+	</div>
+	
+	<!-- Content -->
+	<div class="main container-fluid">
+		<div class="row">
+			<div class="col-xs-2"></div>
+			<div class="col-xs-8">
+				<div class="panel panel-default">
+					<div class="panel-heading"><b>Entre em contacto (danielpratas@hotmail.com)</b></div>
+					<div class="panel-body">
+						<div class="form-group">
+							<input type="text" class="form-control" id="titulo" placeholder="Título">
+							<hr>	
+							<textarea class="form-control" rows="5" id="conteudo" placeholder="Conteúdo"></textarea>
+							<hr>
+							<button type="button" class="pill" onclick="sendEmail()">Enviar email</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-2"></div>
+		</div>
+	</div>
+	
+	<!-- Footer -->
+	<div class="ftr fixed-bottom">
+		<div class="container">
+			<div class="row">
+				<footer>
+					<div class="pull-left">
+						<address>
+							<h3>Daniel Pratas</h3>
+							Rua Doutor Francisco José Palmeiro, Bloco C2, 5º Esq.<br>
+							6000-230 Castelo Branco<br>
+							<a href="mailto: danielpratas@hotmail.com"> danielpratas@hotmail</a><br>
+							<abbr title="Telemovél">Tel:</abbr> 964 438 419
+						</address>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+
+	<!-- JS -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+	<script>
+		function sendEmail() {
+			var title = document.getElementById('titulo').value;
+			var content = document.getElementById('conteudo').value;
+			window.open("mailto:danielpratas@hotmail.com?subject=" + title + "&body=" + content);
+		}
+	</script>
+</body>
+
+</html>
